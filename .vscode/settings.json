@@ -1,7 +1,7 @@
 {
   "files.exclude": {
     "node_modules": true,
-    ".gitignore": true,
+    // ".gitignore": true,
     "favicon.ico": true,
     "package-lock.json": true,
   }
