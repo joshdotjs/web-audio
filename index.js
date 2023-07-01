@@ -44,3 +44,28 @@ const playEffect = () => {
 playEffect();
 
 // ==============================================
+
+const audioKeys = () => {
+
+  const synth = new Tone.Synth().toDestination();
+
+  // create a keyboard
+  const keyboard = new AudioKeys({
+    rows: 1,
+  });
+  console.log('keyboard: ', keyboard);
+  
+  keyboard.down( (note) => {
+    // do things with the note object
+    console.log('note: ', note);
+    synth.triggerAttackRelease(note.frequency, '8n');
+  });
+  
+  keyboard.up( (note) => {
+    // do things with the note object
+  });
+  
+};
+audioKeys();
+
+// ==============================================
